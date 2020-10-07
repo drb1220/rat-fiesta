@@ -1,0 +1,23 @@
+{
+  "name": "rat-fiesta",
+  "version": "1.0.0",
+  "description": "rat",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drb1220/rat-fiesta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drb1220/rat-fiesta/issues"
+  },
+  "homepage": "https://github.com/drb1220/rat-fiesta#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pixi.js": "^5.3.3"
+  }
+}
