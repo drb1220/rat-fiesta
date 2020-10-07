@@ -191,12 +191,15 @@
                     for(var i = 0; i < lines.length; i++){
                         app.stage.addChild(lines[i]);
                     }
+                    for(var i = 0; i < sprites.length; i++){
+                        app.stage.addChild(sprites[i]);
+                    }
                     setTimeout(() =>{
                         //Updates Every tick
                         app.ticker.add(()=>{
-                            rotateX(arr, Math.random()*.04);
-                            rotateY(arr, Math.random()*.04);
-                            rotateZ(arr, Math.random()*.04);
+                            rotateX(arr, 0.01);
+                            rotateY(arr, 0.02);
+                            rotateZ(arr, 0.03);
                             for(var i = 0; i < sprites.length; i++){
                                 sprites[i].scale.x = .2*(Math.abs(arr[i].z - 400)/600)*facing[i];
                                 sprites[i].scale.y = .2*(Math.abs(arr[i].z - 400)/600);
