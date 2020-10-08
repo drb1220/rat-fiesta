@@ -1,7 +1,7 @@
 const fs = require('fs');
 const express = require('express')
 const app = express()
-const port = 8080
+const port = 80
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname+"/public/index.html")
