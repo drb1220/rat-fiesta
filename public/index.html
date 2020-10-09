@@ -85,9 +85,11 @@
             );
             app.renderer.resize(window.innerWidth*.98, window.innerHeight*.98);
 
-            
-            
-            size = 100;
+            if(window.innerWidth < window.innerHeight){
+                size = 60;
+            }else{
+                size = 100;
+            }
 
             arr = [new Point(2*size,0,1*size),
                 new Point(1*size,2*size,0),
@@ -149,8 +151,8 @@
                 sprites[i].anchor.set(0.5);
                 sprites[i].x = arr[i].x + (app.view.width / 2);
                 sprites[i].y = arr[i].y + (app.view.height / 2);
-                sprites[i].scale.x = .2*(Math.abs(arr[i].z - 400)/600);
-                sprites[i].scale.y = .2*(Math.abs(arr[i].z - 400)/600);
+                sprites[i].scale.x = (.2*(Math.abs(arr[i].z - 400)/600))*(size*.01);
+                sprites[i].scale.y = (.2*(Math.abs(arr[i].z - 400)/600))*(size*.01);
                 app.stage.addChild(sprites[i]);
                 facing.push(1);
 
@@ -199,8 +201,8 @@
                             rotateY(arr, 0.02);
                             rotateZ(arr, 0.03);
                             for(var i = 0; i < sprites.length; i++){
-                                sprites[i].scale.x = .2*(Math.abs(arr[i].z - 400)/600)*facing[i];
-                                sprites[i].scale.y = .2*(Math.abs(arr[i].z - 400)/600);
+                                sprites[i].scale.x = (.2*(Math.abs(arr[i].z - 400)/600)*facing[i])*(size*.01);
+                                sprites[i].scale.y = (.2*(Math.abs(arr[i].z - 400)/600))*(size*.01);
                                 sprites[i].x = arr[i].x + (app.view.width / 2);
                                 sprites[i].y = arr[i].y + (app.view.height / 2);
 
