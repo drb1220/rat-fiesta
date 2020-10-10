@@ -15,6 +15,10 @@ app.get('/gold', (req, res) => {
   res.sendFile(__dirname+"/public/gold.html")
 })
 
+app.get('/mcfuck', (req, res) => {
+  res.sendFile(__dirname+"/public/mcride.html")
+})
+
 app.get('/js/:file', async (req, res) => {
   res.sendFile(__dirname+`/js/${req.params.file}`)
 })
@@ -33,6 +37,10 @@ app.get('/electricave', async (req, res) => {
 
 app.get('/bts', async (req, res) => {
   res.sendFile(__dirname+`/audio/gold.mp3`);
+})
+
+app.get('/tiktakyon', async (req, res) => {
+  res.sendFile(__dirname+`/audio/tiktakyon.mp3`);
 })
 
 app.get('*', (req, res) => {
