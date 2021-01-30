@@ -27,6 +27,10 @@ app.get('/gaogao', (req, res) => {
   res.sendFile(__dirname+"/public/gaogao.html")
 })
 
+app.get('/banfield', (req, res) => {
+  res.sendFile(__dirname+"/public/banfield.html")
+})
+
 app.get('/js/:file', async (req, res) => {
   res.sendFile(__dirname+`/js/${req.params.file}`)
 })
@@ -57,6 +61,10 @@ app.get('/gwaaudio', async (req, res) => {
 
 app.get('/gaoaudio', async (req, res) => {
   res.sendFile(__dirname+`/audio/gaogao.mp3`);
+})
+
+app.get('/gas', async (req, res) => {
+  res.sendFile(__dirname+`/audio/gas.mp3`);
 })
 
 app.get('*', (req, res) => {
