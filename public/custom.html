@@ -194,9 +194,9 @@
                     //Updates Every tick
                 app.ticker.add(()=>{
                     persistLines = document.getElementById("persistLines").checked
-                    rotateX(arr, 0.01);
-                    rotateY(arr, 0.02);
-                    rotateZ(arr, 0.03);
+                    rotateX(arr, 0.1);
+                    rotateY(arr, 0.2);
+                    rotateZ(arr, 0.3);
                     for(var i = 0; i < sprites.length; i++){
                         sprites[i].scale.x = (scale*(Math.abs(arr[i].z - 400)/600)*facing[i])*(size*.01);
                         sprites[i].scale.y = (scale*(Math.abs(arr[i].z - 400)/600))*(size*.01);
