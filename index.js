@@ -31,6 +31,10 @@ app.get('/banfield', (req, res) => {
   res.sendFile(__dirname+"/public/banfield.html")
 })
 
+app.get('/custom', (req, res) => {
+  res.sendFile(__dirname+"/public/custom.html")
+})
+
 app.get('/js/:file', async (req, res) => {
   res.sendFile(__dirname+`/js/${req.params.file}`)
 })
